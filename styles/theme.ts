@@ -1,9 +1,11 @@
 export const utility = {
   radio: 1.62,
-  rootSize: 8,
-  lineHeight: "150%",
+  rootSize: 16,
+  lineHeight: 1.5,
   borderRadius: 0,
 };
+
+export const leading = (): number => utility.rootSize * utility.lineHeight;
 
 export const colors = {
   primaryBrand: "#000",
@@ -17,24 +19,42 @@ export const colors = {
 
 export const typography = {
   body: {
-    size: utility.rootSize * 2,
+    size: utility.rootSize,
   },
   primaryTitle: {
-    size: utility.rootSize * 8,
+    size: "4rem",
+    lineHeight: 2 * leading(),
+    marginTop: 3 * leading(),
+    marginBottom: 1 * leading(),
   },
   secondaryTitle: {
-    size: utility.rootSize * 5,
+    size: "2.5rem",
+    lineHeight: 1.5 * leading(),
+    marginTop: 2 * leading(),
+    marginBottom: 1 * leading(),
   },
   tertiaryTitle: {
-    size: utility.rootSize * 5,
+    size: "1.5rem",
+    lineHeight: 2 * leading(),
+    marginTop: 2.5 * leading(),
+    marginBottom: 1 * leading(),
   },
   subHeading: {
-    size: utility.rootSize * 3,
+    size: "1.5rem",
+    lineHeight: 1.5 * leading(),
+    marginTop: 2 * leading(),
+    marginBottom: 0 * leading(),
   },
   preText: {
-    size: utility.rootSize,
+    size: "0.5rem",
+    lineHeight: 1 * leading(),
+    marginTop: 1 * leading(),
+    marginBottom: 0 * leading(),
   },
   button: {
-    size: utility.rootSize,
+    size: "1rem",
+    lineHeight: 1 * leading(),
+    marginTop: 1 * leading(),
+    marginBottom: 0 * leading(),
   },
 };

@@ -15,20 +15,43 @@ const GlobalStyle = createGlobalStyle`
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
   }
+
+  * {
+    line-height:  ${({ theme }) => theme.leading()}px;
+    margin-bottom:  ${({ theme }) => theme.leading()}px;
+  }
+
   h1,h2,h3,h4,h5,h6 {
-      color: ${({ theme }) => theme.colors.dark};
+    color: ${({ theme }) => theme.colors.dark};
+    line-height:  ${({ theme }) => theme.typography.subHeading.lineHeight}px;
+    margin-bottom:  ${({ theme }) =>
+      theme.typography.subHeading.marginBottom}px;
+    margin-top:  ${({ theme }) => theme.typography.subHeading.marginTop}px;  
   }
 
   h1 {
-    font-size: ${({ theme }) => theme.typography.primaryTitle.size}px;
+    font-size: ${({ theme }) => theme.typography.primaryTitle.size};
+    line-height:  ${({ theme }) => theme.typography.primaryTitle.lineHeight}px;
+    margin-bottom:  ${({ theme }) =>
+      theme.typography.primaryTitle.marginBottom}px;
+    margin-top:  ${({ theme }) => theme.typography.primaryTitle.marginTop}px;
   }
 
   h2 {
-    font-size: ${({ theme }) => theme.typography.secondaryTitle.size}px;
+    font-size: ${({ theme }) => theme.typography.secondaryTitle.size};
+    line-height:  ${({ theme }) =>
+      theme.typography.secondaryTitle.lineHeight}px;
+    margin-bottom:  ${({ theme }) =>
+      theme.typography.secondaryTitle.marginBottom}px;
+    margin-top:  ${({ theme }) => theme.typography.secondaryTitle.marginTop}px;
   }
 
   h3 {
-    font-size: ${({ theme }) => theme.typography.tertiaryTitle.size}px;
+    font-size: ${({ theme }) => theme.typography.tertiaryTitle.size};
+    line-height:  ${({ theme }) => theme.typography.tertiaryTitle.lineHeight}px;
+    margin-bottom:  ${({ theme }) =>
+      theme.typography.tertiaryTitle.marginBottom}px;
+    margin-top:  ${({ theme }) => theme.typography.tertiaryTitle.marginTop}px;
   }
   
 `;
